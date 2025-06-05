@@ -20,9 +20,10 @@ public class PackageSorter {
 
     // Optional main method to test the function
     public static void main(String[] args) {
-        System.out.println(sort(100, 100, 100, 10)); // STANDARD
-        System.out.println(sort(160, 40, 40, 10));   // SPECIAL
-        System.out.println(sort(50, 50, 50, 25));    // SPECIAL
-        System.out.println(sort(200, 200, 200, 30)); // REJECTED
+    System.out.println(sort(100, 100, 100, 10)); // SPECIAL (volume = 1,000,000)
+    System.out.println(sort(160, 40, 40, 10));   // SPECIAL (width >= 150)
+    System.out.println(sort(50, 50, 50, 25));    // SPECIAL (mass >= 20)
+    System.out.println(sort(200, 200, 200, 30)); // REJECTED (both bulky and heavy)
+    System.out.println(sort(50, 50, 50, 10));    // STANDARD
     }
 }
